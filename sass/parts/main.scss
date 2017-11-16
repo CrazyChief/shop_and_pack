@@ -1,0 +1,299 @@
+.main {
+  position: relative;
+  z-index: 2;
+  padding-top: em(180);
+  padding-bottom: em(40);
+  background: url(../img/main-bg.jpg) no-repeat;
+  background-size: cover;
+
+  .scroll-down {
+    position: absolute;
+    bottom: -18em;
+    right: 3em;
+    color: rgba(77, 75, 75, .3);
+    font-size: em(12);
+    font-weight: 900;
+    line-height: 26px;
+    text-transform: uppercase;
+    // transform: rotate(90deg);
+    display: none;
+     -webkit-animation-name: Floatingx;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+    @-webkit-keyframes Floatingx{
+      from {-webkit-transform:  rotate(90deg) translate(0, 0px);}
+      65% {-webkit-transform: rotate(90deg)  translate(15px, 0);}
+      to {-webkit-transform: rotate(90deg) translate(-0px, 0);    }    
+    }
+    @-moz-keyframes Floating{
+      from {-moz-transform:  translate(0, 0px);}
+      65% {-moz-transform: translate(0, 15px);}
+      to {-moz-transform: translate(0, -0px);}    
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      left: em(-36,12);
+      top: em(-6,12);
+      background: url("../img/arrow.png") no-repeat;
+      background-size: cover;
+      width: em(11,12);
+      height: em(38,12);
+      transform: rotate(-90deg);
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      background: url("/img/mouse.png") no-repeat;
+      background-size: cover;
+      width: em(20,12);
+      height: em(30,12);
+      transform: rotate(-90deg);
+      top: em(-2,12);
+      right: 13em;
+    }
+
+  }
+
+  &__shoping {
+    position: absolute;
+    background: url("/img/shoping.png") no-repeat;
+    background-size: cover;
+    width: em(404);
+    height: em(204);
+    right: -1em;
+    top: 16em;
+  }
+
+  &__bg {
+    background: url("../img/main-bg.jpg") no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  &__title {
+    color: #ffcc01;
+    font-size: em(40); 
+    font-weight: 900;
+    line-height: em(26,40);
+    text-transform: uppercase;
+    padding-left: em(70,40);
+     margin-bottom: 45px;
+     span {
+      color: #4d4b4b;
+      line-height: em(40,30);
+      font-size: 30px;
+       font-weight: 400;
+     }
+    .top {
+    font-size: 30px;
+    margin-top: 15px;
+    display: block;
+    }
+    .low {
+      text-transform: lowercase;
+      font-size: 26px;
+    }
+    .bold { 
+      font-weight: 900; 
+      margin-left: 8px;
+    }
+  }
+  &__btns {
+    display: flex;
+    margin-bottom: em(70);
+    padding-left: em(70);
+    &-registr {
+      display: inline-block;
+      margin-right: em(23);
+      a {
+        font-size: 1em;
+        font-weight: 500;
+        box-shadow: 0 0 27px 3px rgba(0, 0, 0, 0.15);
+        border-radius: em(2);
+        background: rgba(255,255,255,.8);
+        width: em(200);
+        height: em(55);
+        text-align: center;
+        line-height: 3.5;
+        display: inline-block;
+        color: #4d4b4b;
+        transition: all .5s;
+        border: 2px solid transparent;
+
+        &:hover {
+          border: 2px solid #ffcc01;
+
+        }
+      }
+    }
+    &-buy {
+      display: inline-block;
+      font-size: 1em;
+      font-weight: 500;
+      width: em(200);
+      height: em(55);
+      border: em(1) solid #ffcc01;
+      border-radius: em(2);
+      text-align: center;
+      line-height: 3.5;
+      transition: all .5s;
+      cursor: pointer;
+
+      &:hover {
+        background: #ffcc01;
+
+        a {
+          color: #fff;
+        }
+      }
+      a {
+        transition: all .5s;
+        color: #4d4b4b;
+
+      }
+    }
+  }
+  &__tabs {
+    display: flex;
+    align-items: flex-end;
+    &-main {
+      width: em(145);
+      height: em(145);
+      background-color: #ffcc01;
+      border: em(2) solid #ffcc01;
+      border-radius: 100%;
+      position: relative;
+      margin-right: em(10);
+      span {
+        left: 50%;
+        top: 65%;
+        transform: translate3d(-50%,-50%,0);
+        position: absolute;
+        color: #4d4b4b;
+        font-size: em(15);
+        font-weight: 500;
+        text-align: center;
+        width: 8em;
+        text-transform: uppercase;
+        &:before {
+          position: absolute;
+          top: -3.5em;
+          left: 50%;
+          transform: translate3d(-50%,0,0);
+          background: url("/img/icons/dollar-price-label.svg") no-repeat;
+          width: em(44,15);
+          height: em(44,15);
+          content: '';
+        }
+      }
+    }
+    ul {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+      position: relative;
+      padding-top: em(20);
+      &:after {
+        position: absolute;
+        content: '';
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 1px;
+        background: url("/img/border.png") repeat-x;
+      }
+      li {
+        text-align: center;
+        margin:0 em(25);
+        position: relative;
+
+        &:first-of-type {
+          &:before { 
+            content: '';
+            height: em(3);
+            background: #ffcc01; 
+            width: 100%;
+            max-width: em(85);
+            display: block;
+            position: absolute;
+            z-index: 9999;
+            left: 20%;
+            top: -40%;
+          }
+          p {
+            &:before {
+              position: absolute;
+              content: '';
+              top: -5em;
+              left: 1em;
+              background: url("/img/icons/shop.svg") no-repeat;
+              width: em(50,15);
+              height: em(44,15);
+            }
+          }
+        }
+        &:nth-of-type(2){
+          p {
+            &:before {
+              position: absolute;
+              content: '';
+              top: -5em;
+              left: 68%;
+              transform: translate3d(-50%,0,0);
+              background: url("/img/icons/delivery.svg") no-repeat;
+              width: em(49,15);
+              height: em(44,15);
+            }
+          }
+        }
+        &:last-of-type{
+          p {
+            &:before {
+              position: absolute;
+              content: '';
+              top: -5em;
+              left: 68%;
+              transform: translate3d(-50%,0,0);
+              background: url("/img/icons/package-carrier.svg") no-repeat;
+              width: em(43,15);
+              height: em(44,15);
+            }
+          }
+        }
+      }
+      p {
+        position: relative;
+        color: #4d4b4b;
+        font-size: em(15);
+        font-weight: 500;
+        display: inline;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__phone {
+    position: absolute;
+    right: em(62);
+    top: -4em;
+    width: em(223);
+    height: em(454);
+    background: url("/img/iphone.png") no-repeat;
+    background-size: cover;
+  }
+}

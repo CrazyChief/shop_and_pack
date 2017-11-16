@@ -1,0 +1,208 @@
+.delivery {
+  background: url("/img/deliv-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding-top: em(65);
+  padding-bottom: 7.8125em;
+  padding-left: em(70);
+
+  &__tabs {
+    position: relative;
+    margin-left: 2em;
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: -4em;
+      top: .8em;
+      width: em(48);
+      height: em(8);
+      background-color: #ffcc01;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      li {
+        font-size: em(30);
+
+        &:first-of-type {
+          margin-right: em(40,30);
+          a {
+            position: relative;
+            &:after {
+              position: absolute;
+              content: '/';
+              top: 50%;
+              right: -.7em;
+              font-weight: 500;
+              transform: translate3d(0,-50%,0);
+            }
+          }
+        }
+
+        &.active {
+          a {
+            color: #ffcc01;
+            font-weight: 900;
+            text-decoration: underline;
+
+          }
+        }
+        a {
+          color: #4d4b4b;
+          font-weight: 900;
+          text-decoration: none;
+        }
+      }
+    }
+    span {
+      font-size: em(30);
+      display: block;
+      font-weight: 300;
+      color: #4d4b4b;
+    }
+
+    &-btn {
+      margin-top: em(45);
+      a {
+        display: inline-block;
+        color: #4d4b4b;
+        font-size: 1em;
+        font-weight: 500;
+        width: em(200);
+        height: em(55);
+        border: 1px solid #ffcc01;
+        border-radius: em(2);
+        text-align: center;
+        line-height: 3.5;
+        transition: all .5s;
+        text-transform: capitalize;
+
+        &:hover {
+          background: #ffcc01;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &__line {
+    position: relative;
+    padding-left: 3.25em;
+    top: -15px;
+    margin-left: 2em;
+    .line {
+      background: url("/img/line.png") no-repeat;
+      height: em(207);
+      width: em(868);
+      background-size: cover;
+
+    }
+
+
+    &-item {
+      text-align: center;
+      position: absolute;
+
+      &:first-of-type {
+        left: 2.6em;
+        top: 11em;
+        .text {
+          position: absolute;
+          left: -9em;
+          top: 2.5em;
+          width: 20em;
+
+        }
+        .delivery__line-item--icon {
+          width: em(54);
+          height: em(63);
+          position: absolute;
+          top: -5em;
+          left: -1em;
+        }
+      }
+      &:nth-of-type(2){
+        left: 20em;
+        top: 12em;
+        .delivery__line-item--icon {
+          width: em(29);
+          height: em(62);
+          position: absolute;
+          bottom: -5em;
+        }
+        .text {
+          position: absolute;
+          width: 17em;
+          left: -7em;
+          top: -9em;
+        }
+      }
+      &:nth-of-type(3){
+        left: 37em;
+        top: 3.5em;
+        .delivery__line-item--icon {
+          width: em(72);
+          height: em(63);
+          position: absolute;
+          top: -5em;
+          left: -1.3em;
+        }
+        .text {
+          position: absolute;
+          width: 15em;
+          top: 4em;
+          left: -6em;
+        }
+      }
+      &:last-of-type {
+        left: 56.5em;
+        top: -.5em;
+        .delivery__line-item--icon {
+          width: em(78);
+          height: em(64);
+          position: absolute;
+          top: -4em;
+        }
+        .delivery__line-item--title {
+          position: absolute;
+          left: -7em;
+          top: -1em;
+        }
+        .delivery__line-item--descr {
+          position: absolute;
+          width: 17em;
+          top: 3em;
+        }
+      }
+
+      &--icon {
+
+        &--dot {
+          box-shadow: 0 0 9.5px 0.5px rgba(0, 1, 0, 0.5);
+          border: em(5) solid white;
+          background-color: #ffcc01;
+          width: em(25);
+          height: em(25);
+          border-radius: 100%;
+        }
+
+      }
+      &--title {
+        color: #4d4b4b;
+        font-size: em(18);
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      &--descr {
+        color: #4d4b4b;
+        font-size: em(14);
+        font-weight: 500;
+        line-height: em(26,14);
+      }
+
+
+    }
+  }
+}

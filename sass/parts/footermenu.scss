@@ -1,0 +1,33 @@
+.footer__menu {
+  background: #f7f7f7;
+  padding-top: em(60);
+  padding-bottom: em(50);
+  ul {
+    display: flex;
+    justify-content: center;
+
+  }
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 2em;
+
+
+
+    &:first-of-type {
+      margin-left: em(35);
+    }
+    &:hover,&.active {
+      a {
+        color: #ffcc01;
+      }
+    }
+  }
+  a {
+    font-size: em(14);
+    text-transform: uppercase;
+    color: #4d4b4b;
+    font-weight: 700;
+    transition: all .5s;
+  }
+}

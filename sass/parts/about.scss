@@ -1,0 +1,100 @@
+.about {
+  padding-top: em(115);
+  padding-bottom: em(115);
+
+  &__title {
+    color: #4d4b4b;
+    font-size: em(30);
+    font-weight: 900;
+    margin-bottom: em(34,30);
+    line-height: 1;
+  }
+
+  p {
+    color: #4d4b4b;
+    line-height: em(26,14);
+    font-size: em(14);
+    font-weight: 400;
+    height: em(235,14);
+    overflow: hidden;
+    transition: all .5s;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: em(50,14);
+      background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(246,246,246,0.74) 47%, rgba(246,246,246,0.73) 48%);
+    }
+    &.show {
+      overflow: visible;
+      height: auto;
+      &:after {
+        display: none;
+      }
+    }
+  }
+  .show-all {
+    padding-top: em(48);
+    text-align: center;
+    a {
+      color: #4d4b4b;
+      font-size: em(14);
+      font-weight: 900;
+      text-decoration: underline;
+      display: inline-block;
+    }
+  }
+}
+
+.wherebuy {
+  text-align: center;
+  padding-bottom: em(130);
+
+  &__title {
+    color: #4d4b4b;
+    font-size: em(30);
+    font-weight: 400;
+    margin-bottom: em(60,30);
+    span {
+      font-weight: 900;
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    .item {
+      width: em(233);
+      height: em(117);
+      border-radius: em(5);
+      transition: all .5s;
+      box-shadow: 0 0 27px 3px rgba(0, 0, 0, 0.1); 
+      &:hover img {
+      filter: none;
+      -webkit-filter: grayscale(0);
+      -webkit-transform: scale(1.01);
+    }
+      a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 5em;
+            /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
+        filter: gray; /* IE5+ */
+        -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+        -webkit-transition: all .4s ease-in-out;
+      }
+    }
+  }
+}
